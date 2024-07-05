@@ -36,3 +36,13 @@ INSERT INTO employee.employee (name, email, department_id, address_id) VALUES
 ('John Doe', 'john.doe@example.com', 1, 1),
 ('Jane Smith', 'jane.smith@example.com', 2, 2),
 ('Robert Brown', 'robert.brown@example.com', 3, 3);
+
+
+CREATE TABLE employee.User (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO employee.User (username, password) VALUES ('user1', '$2a$10$D9R/1eVQZPUwLbEybmEThuh3r.fFjbIkspl8k1aay8yIhgS2bTPWG');
+INSERT INTO employee.User (username, password) VALUES ('user2', '$2a$10$7dh5gNaxS7Q4B.mP1AlQ9ehjG5HvUOf2AQ4BFW.ydOm6Ahh0YDOxO');
